@@ -1,3 +1,4 @@
+// NOLINTBEGIN(bugprone-exception-escape)
 #include <array>
 #include <functional>
 #include <iostream>
@@ -13,19 +14,21 @@
 // the source template at `configured_files/config.hpp.in`.
 #include <internal_use_only/config.hpp>
 
-
 // NOLINTNEXTLINE(bugprone-exception-escape)
-int main(int argc, const char **argv)
-{
-  try {
-    CLI::App app{ fmt::format("{} version {}", Foempvge::cmake::project_name, Foempvge::cmake::project_version) };
+int main([[maybe_unused]]int argc, const char **argv) {
+    try {
+        CLI::App app{fmt::format("{} version {}", Foempvge::cmake::project_name, Foempvge::cmake::project_version)};
 
-    std::optional<std::string> message;
-    app.add_option("-m,--message", message, "A message to print back out");
-    bool show_version = false;
-    app.add_flag("--version", show_version, "Show version information");
+        std::optional<std::string> message;
+        app.add_option("-m,--message", message, "A message to print back out");
+        bool show_version = false;
+        app.add_flag("--version", show_version, "Show version information");
 
-  } catch (const std::exception &e) {
-    spdlog::error("Unhandled exception in main: {}", e.what());
-  }
+        CLI11_PARSE(app, argc, argv);
+
+        if(show_version) {
+            fmt::print("{}\n", Foempvge::cmake::project_version);
+            return EXIT_SUCCESS;
+        }
+    } catch(const std::exception &e) { spdlog::error("Unhandled exception in main: {}", e.what()); }
 }

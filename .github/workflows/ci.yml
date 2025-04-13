@@ -139,7 +139,7 @@ jobs:
         uses: humbletim/install-vulkan-sdk@v1.2
         with:
           # official Vulkan SDK release version to use
-          version: latest
+          version: 1.4.309.0
           
 
       - name: Setup Cpp

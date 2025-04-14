@@ -11,3 +11,10 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "[github] "
+
+  - package-ecosystem: "github-actions" # See documentation for possible values
+    directory: "/.github/actions/setup_cache" # Location of package manifests
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "[github] "

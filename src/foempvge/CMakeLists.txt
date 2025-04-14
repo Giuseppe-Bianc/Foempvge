@@ -14,7 +14,6 @@ target_link_system_libraries(
   foempvge
   PRIVATE
           CLI11::CLI11
-          fmt::fmt
-          spdlog::spdlog)
+        foempvge_lib)
 
 target_include_directories(foempvge PRIVATE "${CMAKE_BINARY_DIR}/configured_files/include")

@@ -1,5 +1,10 @@
 add_executable(foempvge main.cpp)
 
+
+get_target_property(target_name foempvge NAME)
+include("${CMAKE_SOURCE_DIR}/cmake/Simd.cmake")
+set_simd_instructions(${target_name})
+
 target_link_libraries(
   foempvge
   PRIVATE Foempvge::Foempvge_options

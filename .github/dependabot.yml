@@ -18,3 +18,10 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "[github] "
+
+  - package-ecosystem: "docker"
+    directory: ".devcontainer"
+    schedule:
+    interval: "daily"
+    commit-message:
+      prefix: "[github] "

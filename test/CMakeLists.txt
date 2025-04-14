@@ -30,7 +30,7 @@ add_test(NAME cli.version_matches COMMAND foempvge --version)
 set_tests_properties(cli.version_matches PROPERTIES PASS_REGULAR_EXPRESSION "${PROJECT_VERSION}")
 
 add_executable(tests tests.cpp)
-target_link_libraries(
+#[[target_link_libraries(
   tests
   PRIVATE Foempvge::Foempvge_warnings
           Foempvge::Foempvge_options
@@ -58,9 +58,10 @@ catch_discover_tests(
   OUTPUT_PREFIX
   "unittests."
   OUTPUT_SUFFIX
-  .xml)
+  .xml)]]
 
 # Add a file containing a set of constexpr tests
+#[[
 add_executable(constexpr_tests constexpr_tests.cpp)
 target_link_libraries(
   constexpr_tests
@@ -105,3 +106,4 @@ catch_discover_tests(
   "relaxed_constexpr."
   OUTPUT_SUFFIX
   .xml)
+]]

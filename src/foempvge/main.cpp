@@ -2,7 +2,6 @@
 #include <CLI/CLI.hpp>
 #include <Foempvge/foempvge_lib.hpp>
 
-
 // NOLINTNEXTLINE(bugprone-exception-escape)
 int main(int argc, const char **argv) {
     INIT_LOG()

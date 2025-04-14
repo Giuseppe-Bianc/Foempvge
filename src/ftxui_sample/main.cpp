@@ -15,7 +15,7 @@
 #include <internal_use_only/config.hpp>
 
 // NOLINTNEXTLINE(bugprone-exception-escape)
-int main([[maybe_unused]]int argc, const char **argv) {
+int main(int argc, const char **argv) {
     try {
         CLI::App app{fmt::format("{} version {}", Foempvge::cmake::project_name, Foempvge::cmake::project_version)};
 

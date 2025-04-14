@@ -1,6 +1,6 @@
 #pragma once
 
-//#include <Foempvge/foempvge_lib_export.hpp>
+// #include <Foempvge/foempvge_lib_export.hpp>
 
 /*[[nodiscard]] SAMPLE_LIBRARY_EXPORT int factorial(int) noexcept;
 

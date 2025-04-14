@@ -1,3 +1,4 @@
+add_subdirectory(foe_wsi)
 add_subdirectory(foempvge_lib_core)
 add_subdirectory(foempvge_lib)
 add_subdirectory(foempvge)

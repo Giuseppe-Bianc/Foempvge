@@ -6,3 +6,4 @@
 #pragma once
 
 #include <foempvge_lib_core/foempvge_lib_core.hpp>
+#include <foe_wsi/foe_wsi.hpp>

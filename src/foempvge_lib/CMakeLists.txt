@@ -14,6 +14,7 @@ target_link_libraries(foempvge_lib
         Foempvge_options
         Foempvge_warnings
         PUBLIC
+        Foempvge::foe_wsi
         Foempvge::foempvge_lib_core
 )
 

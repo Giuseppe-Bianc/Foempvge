@@ -108,7 +108,7 @@ if (MSVC)
 endif ()
 
 # set the startup project for the "play" button in MSVC
-set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT intro)
+set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT foempvge)
 
 if (CMAKE_SKIP_INSTALL_RULES)
   return()
@@ -120,7 +120,7 @@ include(cmake/PackageProject.cmake)
 # we know we want to ship
 Foempvge_package_project(
   TARGETS
-  intro
+  foempvge
   Foempvge_options
   Foempvge_warnings
   # FIXME: this does not work! CK
